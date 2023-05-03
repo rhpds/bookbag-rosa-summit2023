@@ -20,7 +20,7 @@ The password for the user %rosa_bastion_user_name% is `%rosa_user_password%`
 +
 [source,sh,role=execute]
 ----
-ssh %rosa_bastion_user_name%@bastion.%rosa_subdomain_base%
+ssh -o ServerAliveInterval=600 %rosa_bastion_user_name%@bastion.%rosa_subdomain_base%
 ----
 
 === Validate installed tools
@@ -83,7 +83,8 @@ tar -xzvf $HOME/openshift-client-linux.tar.gz -C $HOME/bin
 rm $HOME/openshift-client-linux.tar.gz
 ----
 +
-*Why use `oc` over `kubectl`* + Being Kubernetes, one can definitely use `kubectl` with their OpenShift cluster.
+*Why use `oc` over `kubectl`* +
+Being Kubernetes, one can definitely use `kubectl` with their OpenShift cluster.
 `oc` is specific to OpenShift in that it includes the standard set of features from `kubectl` plus additional support for OpenShift functionality. See https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/usage-oc-kubectl.html[Usage of oc and kubectl commands] for more details.
 
 . Validate the version of the OpenShift CLI that got installed:
