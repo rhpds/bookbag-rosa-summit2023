@@ -1,8 +1,9 @@
 ---
-name: Summit 2023 ROSA Workshop
+name: Exploring ROSA with HCP
 modules:
   activate:
   - home
+  - conclusion
   - ops/lab_1_setup
   - ops/lab_2_deploy_cluster
   - ops/lab_2_deploy_hcp
