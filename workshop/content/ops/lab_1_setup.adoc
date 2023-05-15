@@ -122,7 +122,7 @@ Normally you would need to get a *token* from the https://console.redhat.com/ope
 In this environment your token has been preconfigured for you.
 ====
 
-. Run `rosa whoami`` to verify your credentials:
+. Run `rosa whoami` to verify your credentials:
 +
 [source,sh,role=execute]
 ----
