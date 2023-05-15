@@ -28,11 +28,12 @@ oc logs -n ostoy-${GUID} deploy/ostoy-frontend
 .Sample Output
 [source,text,options=nowrap]
 ----
-Version: 1.5.0
-ostoy-frontend-84cbd867db-f2ggw: server starting on port 8080
-If this is not running on AWS and/or you have no intention of using the ACK please ignore.
- - Error in accessing the ostoy-6xjt6-bucket, or it does not exist.
- - ACK feature disabled
+Version: 1.6.0
+ostoy-frontend-dc8658556-4tb4s: server starting on port 8080
+ACK feature disabled. ostoy-bucket not found.
+Connection string secret file does not exist or is not readable.
+ASO feature disabled. Connection string not found.
+Redirecting to /home
 stdout: All is well!
 stderr: Oh no! Error!
 ----
@@ -48,7 +49,7 @@ stderr: Oh no! Error!
 
 . Click on _Logs_ > _Log groups_ in the left menu to see the different groups of logs depending on what you selected during installation.
 If you followed the previous steps you should see 4 groups.
-One for `rosa-XXXXX.audit`, one for `rosa-XXXXX.infrastructure`, one for `rosa-XXXXX.ack-system` and finally your ostoy project `rosa-XXXX.ostoy-XXXX`.
+One for `rosa-XXXXX.audit`, one for `rosa-XXXXX.infrastructure`, and one for each namespace like our ostoy project `rosa-XXXX.ostoy-XXXX`.
 +
 image::images/9-cw.png[cloudwatch]
 
@@ -64,7 +65,7 @@ image::images/9-stderr.png[cloudwatch2]
 
 . We can also see other messages in our logs from the app.
 Enter "microservice" in the search bar, and expand one of the entries.
-This shows us the color recieved from the microservice and which pod sent that color to our frontend pod.
+This shows us the color received from the microservice and which pod sent that color to our frontend pod.
 +
 image::images/9-messages.png[messages]
 

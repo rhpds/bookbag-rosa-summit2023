@@ -1,16 +1,15 @@
 = Overview
 
-Join Red Hat for a hands-on workshop with Red Hat OpenShift Service on AWS (ROSA). During the event, Red Hat Cloud Services experts will guide you through the ROSA architecture and will answer your questions.
+https://aws.amazon.com/rosa/[Red Hat OpenShift Service on AWS] (ROSA) is a fully managed Red Hat OpenShift service in AWS that is jointly offered and supported by AWS and Red Hat. In this lab, you'll go through a set of tasks that will help you understand some of the concepts of deploying and securing container based applications on top of ROSA.
 
-*Who should attend:* This full-day, in-person workshop is ideal for developers, architects and operations engineers who need a flexible and proven platform to build, deploy and scale applications.
+You can use this guide as an OpenShift tutorial and as study material to help you get started to learn OpenShift and integrating applications with AWS. The lab does touch on some basic Kubernetes concepts but does not go into detail explaining them as there is an expectation of a working knowledge of Kubernetes/OpenShift to do this lab.
 
-*What to expect:* During the workshop, we will take you through a series of content to help you understand some of the concepts of deploying container-based applications on Red Hat OpenShift Service on AWS and how to operate an Red Hat OpenShift Service on AWS cluster. We will cover the following:
+.Some of the things you'll be going through:
+* Experience self healing of applications
+* Explore configuration management through configmaps, secrets and environment variables
+* Explore networking within Kubernetes and applications
+* Explore logging
 
-- Deploy a Red Hat OpenShift Service on AWS (ROSA) cluster
-- Complete Day 2 operations tasks including: configuring node and cluster scaling policies, configuring managed upgrades, configuring single-sign-on for the cluster, and forwarding logs to AWS CloudWatch
-- Deploy an application using CI/CD tooling, including OpenShift GitOps and Source-to-Image, and use labels for deterministic app placement on nodes.
-- Deploy an application that uses IAM Roles for Service Accounts and AWS STS to connect to an Amazon DynamoDB table
-- Make an application on OpenShift scalable and resistant to node failures and upgrades
-- Learn how to use OpenShift Service Mesh for application observability and tracing
+Lastly, to tie it together in a real world scenario you will integrate the application with AWS S3 Storage and use https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html[IAM Roles for Service Accounts] (IRSA) to manage authentication and credentials to the service. Then the application will use that in order to read/write objects to AWS S3.
 
-Get experience with, and an informed view of Red Hat OpenShift Service on AWS.
+You'll be doing the majority of the labs using the OpenShift CLI, but you can also accomplish them using the Red Hat OpenShift web console as well.

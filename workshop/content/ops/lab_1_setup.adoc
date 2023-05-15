@@ -37,8 +37,8 @@ rosa version
 .Sample Output
 [source,texinfo]
 ----
-1.2.21
-I: Your ROSA CLI is up to date.
+1.2.15
+Your ROSA CLI is up to date.
 ----
 
 . Verify that the `aws` command line tool is installed:
@@ -51,7 +51,7 @@ aws --version
 .Sample Output
 [source,text,options=nowrap]
 ----
-aws-cli/2.11.20 Python/3.11.3 Linux/4.18.0-305.88.1.el8_4.x86_64 exe/x86_64.rhel.8 prompt/off
+aws-cli/2.11.14 Python/3.11.3 Linux/4.18.0-305.82.1.el8_4.x86_64 exe/x86_64.rhel.8 prompt/off
 ----
 
 . Verify that the `aws` command line tool is configured:
@@ -98,7 +98,7 @@ oc version
 .Sample Output
 [source,text,options=nowrap]
 ----
-Client Version: 4.12.16
+Client Version: 4.12.14
 Kustomize Version: v4.5.7
 ----
 
@@ -163,5 +163,14 @@ rosa/rosa_getting_started/rosa-required-aws-service-quotas.html
 ----
 +
 See https://docs.openshift.com/rosa/rosa_planning/rosa-sts-required-aws-service-quotas.html[the documentation] for more details regarding quotas.
+
+=== Ensure ELB service role exists
+
+Run the following to check for the role and create it if it is missing.
+
+[source,sh,role=execute]
+----
+aws iam get-role --role-name "AWSServiceRoleForElasticLoadBalancing" || aws iam create-service-linked-role --aws-service-name "elasticloadbalancing.amazonaws.com"
+----
 
 We have now successfully set up our account and environment and are ready to deploy our cluster.
