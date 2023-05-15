@@ -6,7 +6,7 @@ We will do that now.
 
 === Create new project
 
-. Create a new project called "ostoy" in your cluster by entering the following command:
+. Create a new project in your cluster by entering the following command:
 +
 [source,sh,role=execute]
 ----
@@ -94,7 +94,7 @@ ostoy-route-ostoy-6xjt6.apps.rosa-6xjt6.qkm6.p1.openshiftapps.com
 
 === View the app
 
-Copy the host name of your route above and paste it into your browser and press enter (if you are on a *Chrome* based browser make sure to type `http` - `https` will not work for this application).
+Copy the host name of your route above and paste it into your browser and press enter.
 
 You should see the homepage of our application.
 

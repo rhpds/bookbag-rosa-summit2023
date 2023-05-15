@@ -39,17 +39,44 @@ export PUBLIC_SUBNET_ID=<public subnet id here>
 export PRIVATE_SUBNET_ID=<private subnet id here>
 ----
 
+. Confirm that the environment variables are, in fact, set.
++
+[source,sh,role=execute]
+----
+echo "Public Subnet: $PUBLIC_SUBNET_ID"; echo "Private Subnet: $PRIVATE_SUBNET_ID"
+----
++
+.Sample Output
+[source,text]
+----
+Public Subnet: subnet-0faeeeb0000000000
+Private Subnet: subnet-011fe340000000000
+----
++
+[WARNING]
+====
+If one, or both, are blank do not proceed and ask for assistance.
+====
+
+
 === OIDC Configuration
 
 To create the OIDC configuration to be used in this workshop, run the following command.  We are opting for the automatic mode as this is simpler for the workshop purposes as well as for it to be Red Hat managed. We are also going to store the OIDC ID to an environment variable for later use.
 
 [source,sh,role=execute]
 ----
-export OIDC_ID=$(rosa create oidc-config --mode auto --managed --yes -o json | jq -r '.id')
+export OIDC_ID=$(rosa create oidc-config --mode auto --managed --yes -o json | jq -r '.id'); echo $OIDC_ID;
+----
++
+.Sample Output
+[source,texinfo]
+----
+23o3doeo86adgqhci4jl000000000000
 ----
 
+
 == Create the cluster
-Since this is the <u>first time</u> you are deploying ROSA in this account and have <u>not yet created the account roles</u>, then create the account-wide roles and policies, including Operator policies.
+Since this is the first time you are deploying ROSA in this account and have not yet created the account roles, then create the account-wide roles and policies, including Operator policies.
 
 . Run the following command to create the account-wide roles:
 +

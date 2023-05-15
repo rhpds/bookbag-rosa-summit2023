@@ -50,7 +50,7 @@ This command adds a single m6a.xlarge instance to the availability zone. It will
 +
 [source,sh,role=execute]
 ----
-rosa list machinepools -c rose-${GUID}
+rosa list machinepools -c rosa-${GUID}
 ----
 +
 .Sample Output
@@ -74,9 +74,10 @@ rosa edit machinepool -c rosa-${GUID} --replicas 2 workshop
 ----
 I: Updated machine pool 'workshop' on cluster 'rosa-6n4s8'
 ----
-+ After a few minutes we should see 2 nodes in the machine pool.
++
+After a few minutes we should see 2 nodes in the machine pool.
 
-. We don't actually need these extra worker nodes so let's scale the cluster back down to a total of 2 worker nodes by deleting the "workshop" machine pool.
+. We don't actually need these extra worker nodes, so let's scale the cluster back down to a total of 2 worker nodes by deleting the "workshop" machine pool.
 To do so, run the following command:
 +
 [source,sh,role=execute]
@@ -90,6 +91,6 @@ rosa delete machinepool -c rosa-${GUID} workshop --yes
 I: Successfully deleted machine pool 'workshop' from cluster 'rosa-6n4s8'
 ----
 
-As you've seen you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels and autoscaling.
+As you've seen you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels and autoscaling.  For more information about what you can do with machine pools see the https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.html#creating_machine_pools_cli_rosa-managing-worker-nodes[Creating a machine pool using the ROSA CLI].
 
-You've successfully scaled your cluster up and back down to two worker nodes.
+You've successfully scaled your cluster up and back down to two worker nodes and seen how to add nodes of different instance types.

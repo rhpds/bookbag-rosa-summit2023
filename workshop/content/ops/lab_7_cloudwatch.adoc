@@ -17,12 +17,14 @@ curl https://raw.githubusercontent.com/openshift-cs/rosaworkshop/master/rosa-wor
 ----
 +
 .Sample Output
-[source,sh,options=nowrap]
+[source,text,options=nowrap]
 ----
-deployment "cluster-logging-operator" successfully rolled out
+subscription.operators.coreos.com/cluster-logging created
+Waiting for deployment to complete...
 secret/cloudwatch-credentials created
 clusterlogforwarder.logging.openshift.io/instance created
 clusterlogging.logging.openshift.io/instance created
+Complete.
 ----
 
 . After a few minutes, you should begin to see log groups inside of AWS CloudWatch. Repeat this command until you do or continue the lab if you don't want to wait.
