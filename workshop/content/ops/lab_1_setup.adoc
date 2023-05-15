@@ -37,8 +37,8 @@ rosa version
 .Sample Output
 [source,texinfo]
 ----
-1.2.15
-Your ROSA CLI is up to date.
+1.2.21
+I: Your ROSA CLI is up to date.
 ----
 
 . Verify that the `aws` command line tool is installed:
@@ -51,7 +51,7 @@ aws --version
 .Sample Output
 [source,text,options=nowrap]
 ----
-aws-cli/2.11.14 Python/3.11.3 Linux/4.18.0-305.82.1.el8_4.x86_64 exe/x86_64.rhel.8 prompt/off
+aws-cli/2.11.20 Python/3.11.3 Linux/4.18.0-305.88.1.el8_4.x86_64 exe/x86_64.rhel.8 prompt/off
 ----
 
 . Verify that the `aws` command line tool is configured:
@@ -83,7 +83,9 @@ tar -xzvf $HOME/openshift-client-linux.tar.gz -C $HOME/bin
 rm $HOME/openshift-client-linux.tar.gz
 ----
 +
-*Why use `oc` over `kubectl`* + Being Kubernetes, one can definitely use `kubectl` with their OpenShift cluster.
+*Why use `oc` over `kubectl`*
++
+Being Kubernetes, one can definitely use `kubectl` with their OpenShift cluster.
 `oc` is specific to OpenShift in that it includes the standard set of features from `kubectl` plus additional support for OpenShift functionality. See https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/usage-oc-kubectl.html[Usage of oc and kubectl commands] for more details.
 
 . Validate the version of the OpenShift CLI that got installed:
@@ -96,7 +98,7 @@ oc version
 .Sample Output
 [source,text,options=nowrap]
 ----
-Client Version: 4.12.14
+Client Version: 4.12.16
 Kustomize Version: v4.5.7
 ----
 

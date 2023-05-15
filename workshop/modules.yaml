@@ -25,32 +25,32 @@ modules:
     name: Log Forwarding to Cloudwatch
     exit_sign: Continue
   ostoy/0_introduction:
-    name: Introduction
+    name: Deploy App - Introduction
     exit_sign: Continue
   ostoy/1_overview:
-    name: Overview
+    name: Deploy App - Overview
     exit_sign: Continue
   ostoy/2_deployment:
-    name: Deployment
+    name: Deploy App - Deployment
     exit_sign: Continue
   ostoy/3_healthcheck:
-    name: Health Checks
+    name: Deploy App - Health Checks
     exit_sign: Continue
   ostoy/4_storage:
-    name: Storage
+    name: Deploy App - Storage
     exit_sign: Continue
   ostoy/5_confsecenv:
-    name: Configuration
+    name: Deploy App - Configuration
     exit_sign: Continue
   ostoy/6_networking:
-    name: Networking
+    name: Deploy App - Networking
     exit_sign: Continue
   ostoy/7_scaling:
-    name: Scaling
+    name: Deploy App - Scaling
     exit_sign: Continue
   ostoy/8_logging:
-    name: Logging
+    name: Deploy App - Logging
     exit_sign: Continue
   ostoy/9_ack:
-    name: ACK
+    name: Deploy App - ACK
     exit_sign: Exit
