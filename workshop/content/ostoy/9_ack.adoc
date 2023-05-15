@@ -287,7 +287,6 @@ export APP_IAM_ROLE_ARN=$(aws iam get-role --role-name=ostoy-sa-role --query Rol
 [source,sh,role=execute]
 ----
 cat <<EOF >$HOME/ostoy-serviceaccount.yaml
----
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -338,7 +337,6 @@ Events:              <none>
 [source,sh,role=execute]
 ----
 cat << EOF >$HOME/s3-bucket.yaml
----
 apiVersion: s3.services.k8s.aws/v1alpha1
 kind: Bucket
 metadata:

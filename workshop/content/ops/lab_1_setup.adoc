@@ -9,7 +9,7 @@ ROSA is enabled on the AWS account used for this lab - and the ROSA CLI as well 
 
 == Connect to your bastion VM
 
-. In the terminal window to the right connect to the bastion VM (you can also just click the command below to have it copied and executed automatically):
+. In the terminal window to the right, connect to the bastion VM (you can click the command below to have it copied and executed automatically):
 +
 [TIP]
 ====
@@ -122,7 +122,7 @@ Normally you would need to get a *token* from the https://console.redhat.com/ope
 In this environment your token has been preconfigured for you.
 ====
 
-. Run rosa whoami to verify your credentials:
+. Run `rosa whoami`` to verify your credentials:
 +
 [source,sh,role=execute]
 ----
