@@ -6,8 +6,8 @@ modules:
   ops/lab_1_setup:
     name: Setup
     exit_sign: Continue
-  ops/lab_2_deploy_cluster:
-    name: Deploy ROSA cluster
+  ops/lab_2_deploy_hcp:
+    name: Deploy ROSA w/HCP cluster
     exit_sign: Continue
   ops/lab_3_create_admin_user:
     name: Create admin user
@@ -15,42 +15,42 @@ modules:
   ops/lab_4_managing_worker_nodes:
     name: Managing Worker Nodes
     exit_sign: Continue
-  ops/lab_5_labeling_nodes:
-    name: Labeling Nodes
-    exit_sign: Continue
-  ops/lab_6_autoscaling:
-    name: Cluster Autoscaling
-    exit_sign: Continue
+  # ops/lab_5_labeling_nodes:
+  #   name: Labeling Nodes
+  #   exit_sign: Continue
+  # ops/lab_6_autoscaling:
+  #   name: Cluster Autoscaling
+  #   exit_sign: Continue
   ops/lab_7_cloudwatch:
-    name: Log Forwarding to Cloudwatch
+    name: Configure Log Forwarding to Cloudwatch
     exit_sign: Continue
   ostoy/0_introduction:
-    name: Deploy App - Introduction
+    name: Deploy the Application - Intro
     exit_sign: Continue
   ostoy/1_overview:
-    name: Deploy App - Overview
+    name: Overview
     exit_sign: Continue
   ostoy/2_deployment:
-    name: Deploy App - Deployment
+    name: Deployment
     exit_sign: Continue
   ostoy/3_healthcheck:
-    name: Deploy App - Health Checks
+    name: Health Checks
     exit_sign: Continue
   ostoy/4_storage:
-    name: Deploy App - Storage
+    name: Storage
     exit_sign: Continue
   ostoy/5_confsecenv:
-    name: Deploy App - Configuration
+    name: Configuration
     exit_sign: Continue
   ostoy/6_networking:
-    name: Deploy App - Networking
+    name: Networking
     exit_sign: Continue
-  ostoy/7_scaling:
-    name: Deploy App - Scaling
-    exit_sign: Continue
+  # ostoy/7_scaling:
+  #   name: Scaling
+  #   exit_sign: Continue
   ostoy/8_logging:
-    name: Deploy App - Logging
+    name: Logging
     exit_sign: Continue
   ostoy/9_ack:
-    name: Deploy App - ACK
+    name: Integration w/AWS Services
     exit_sign: Exit

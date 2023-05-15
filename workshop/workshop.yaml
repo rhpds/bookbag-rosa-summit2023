@@ -5,10 +5,11 @@ modules:
   - home
   - ops/lab_1_setup
   - ops/lab_2_deploy_cluster
+  - ops/lab_2_deploy_hcp
   - ops/lab_3_create_admin_user
   - ops/lab_4_managing_worker_nodes
-  - ops/lab_5_labeling_nodes
-  - ops/lab_6_autoscaling
+  # - ops/lab_5_labeling_nodes
+  # - ops/lab_6_autoscaling
   - ops/lab_7_cloudwatch
   - ostoy/0_introduction
   - ostoy/1_overview
@@ -17,6 +18,6 @@ modules:
   - ostoy/4_storage
   - ostoy/5_confsecenv
   - ostoy/6_networking
-  - ostoy/7_scaling
+  # - ostoy/7_scaling
   - ostoy/8_logging
   - ostoy/9_ack
