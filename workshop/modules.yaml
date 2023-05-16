@@ -54,6 +54,6 @@ modules:
   ostoy/9_ack:
     name: Integration w/AWS Services
     exit_sign: Continue
- conclusion:
+  conclusion:
     name: Conclusion
     exit_sign: Exit
