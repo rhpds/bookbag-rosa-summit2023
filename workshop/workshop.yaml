@@ -3,7 +3,6 @@ name: Exploring ROSA with HCP
 modules:
   activate:
   - home
-  - conclusion
   - ops/lab_1_setup
   - ops/lab_2_deploy_cluster
   - ops/lab_2_deploy_hcp
@@ -22,3 +21,4 @@ modules:
   # - ostoy/7_scaling
   - ostoy/8_logging
   - ostoy/9_ack
+  - conclusion
