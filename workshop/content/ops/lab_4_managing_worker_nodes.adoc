@@ -27,9 +27,9 @@ workers  No           2                 2                 m5.xlarge             
 +
 Note that there is only a machine pool for worker nodes.
 
-. Now that we know that we have two worker nodes, let's create a machine pool to add a new worker node using the ROSA CLI. Let's create this one of a different instance type.  We already have `m5.xlarge`, so for this machine pool let's use `m6a.xlarge`.  See https://docs.openshift.com/rosa/rosa_architecture/rosa_policy_service_definition/rosa-service-definition.html#rosa-sdpolicy-aws-instance-types_rosa-service-definition[AWS Instance Types] for all supported instance types.
+. Now that we know that we have two worker nodes, let's create a new machine pool called `workshop` to add a new worker node. Let's create this one of a different instance type.  We already have `m5.xlarge`, so for this machine pool let's use `m6a.xlarge`.  See https://docs.openshift.com/rosa/rosa_architecture/rosa_policy_service_definition/rosa-service-definition.html#rosa-sdpolicy-aws-instance-types_rosa-service-definition[AWS Instance Types] for all supported instance types.
 +
-To do so, run the following command:
+To do so, run the following command. It will take a few minutes for the nodes to become available.
 +
 [source,sh,role=execute]
 ----
@@ -44,7 +44,7 @@ I: Machine pool 'workshop' created successfully on cluster 'rosa-6n4s8'
 I: To view all machine pools, run 'rosa list machinepools -c rosa-6n4s8'
 ----
 +
-This command adds a single m6a.xlarge instance to the availability zone. It will take a few minutes for the node to become available.
+This command adds a single `m6a.xlarge` instance to the availability zone.
 
 . Confirm the machine pool was created and that the node is available.
 +
@@ -91,6 +91,6 @@ rosa delete machinepool -c rosa-${GUID} workshop --yes
 I: Successfully deleted machine pool 'workshop' from cluster 'rosa-6n4s8'
 ----
 
-As you've seen you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels and autoscaling.  For more information about what you can do with machine pools see the https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.html#creating_machine_pools_cli_rosa-managing-worker-nodes[Creating a machine pool using the ROSA CLI].
+As you've seen you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels, taints, and autoscaling.  For more information about what you can do with machine pools see the https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.html#creating_machine_pools_cli_rosa-managing-worker-nodes[Creating a machine pool using the ROSA CLI].
 
 You've successfully scaled your cluster up and back down to two worker nodes and seen how to add nodes of different instance types.

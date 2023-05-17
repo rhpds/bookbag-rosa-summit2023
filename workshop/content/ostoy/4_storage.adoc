@@ -79,7 +79,7 @@ ostoy-frontend-84cbd867db-f2ggw      1/1     Running   1 (2m52s ago)   4m8s
 ostoy-microservice-54789d5d9-rwj9s   1/1     Running   0               4m36s
 ----
 
-. Open an interactive shell session inside the container within our pod: (no need to copy/paste from above):
+. Open an interactive shell session inside the container within our pod (no need to copy/paste from above):
 +
 [source,sh,role=execute]
 ----

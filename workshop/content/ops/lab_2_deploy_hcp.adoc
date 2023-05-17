@@ -67,16 +67,16 @@ To create the OIDC configuration to be used in this workshop, run the following 
 ----
 export OIDC_ID=$(rosa create oidc-config --mode auto --managed --yes -o json | jq -r '.id'); echo $OIDC_ID;
 ----
-+
+
 .Sample Output
-[source,texinfo]
+[source,text]
 ----
 23o3doeo86adgqhci4jl000000000000
 ----
 
 
 == Create the cluster
-Since this is the first time you are deploying ROSA in this account and have not yet created the account roles, then create the account-wide roles and policies, including Operator policies.
+Since this is the first time you are deploying ROSA in this account and have not yet created the account roles, then create the account-wide roles and policies, including Operator policies.  Since ROSA makes use of AWS Security Token Service (STS), this step creates the IAM roles and policies that are needed for ROSA to interact within your account.  See https://docs.openshift.com/rosa/rosa_architecture/rosa-sts-about-iam-resources.html#rosa-sts-account-wide-roles-and-policies_rosa-sts-about-iam-resources[Account-wide IAM role and policy reference] for more details if you are interested.
 
 . Run the following command to create the account-wide roles:
 +
