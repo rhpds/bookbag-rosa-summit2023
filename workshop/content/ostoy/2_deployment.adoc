@@ -83,7 +83,7 @@ secret/ostoy-secret created
 +
 [source,sh,role=execute]
 ----
-oc get route
+oc get route ostoy-route -o jsonpath='{.spec.host}{"\n"}' -n ostoy-${GUID}
 ----
 +
 .Sample Output

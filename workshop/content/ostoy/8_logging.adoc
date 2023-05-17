@@ -18,11 +18,11 @@ image::images/9-ostoy-stderr.png[Logging stderr]
 
 === View application logs using `oc`
 
-. Go to the CLI and enter the following command to retrieve the name of your frontend pod which we will use to view the pod logs:
+. Enter the following command to retrieve the logs from the `frontend` pod:
 +
 [source,sh,role=execute]
 ----
-oc logs -n ostoy-${GUID} deploy/ostoy-frontend
+oc logs $(oc get pods -n ostoy-${GUID} -o name | grep frontend)
 ----
 +
 .Sample Output
@@ -48,7 +48,7 @@ stderr: Oh no! Error!
 . In the *Search* bar at the top type `CloudWatch` and click on *CloudWatch* in the search results.
 
 . Click on _Logs_ > _Log groups_ in the left menu to see the different groups of logs depending on what you selected during installation.
-If you followed the previous steps you should see 4 groups.
+If you followed the previous steps you should see at least 3 groups.
 One for `rosa-XXXXX.audit`, one for `rosa-XXXXX.infrastructure`, and one for each namespace like our ostoy project `rosa-XXXX.ostoy-XXXX`.
 +
 image::images/9-cw.png[cloudwatch]

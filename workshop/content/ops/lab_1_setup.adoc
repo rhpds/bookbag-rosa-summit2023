@@ -71,24 +71,7 @@ aws sts get-caller-identity
 }
 ----
 
-. Download and install the oc binary. The `rosa` CLI has the capability to automatically download the latest version of the oc binary (`rosa download oc`).
-+
-[source,sh,role=execute]
-----
-cd $HOME
-rosa download oc
-
-mkdir $HOME/bin
-tar -xzvf $HOME/openshift-client-linux.tar.gz -C $HOME/bin
-rm $HOME/openshift-client-linux.tar.gz
-----
-+
-*Why use `oc` over `kubectl`*
-+
-Being Kubernetes, one can definitely use `kubectl` with their OpenShift cluster.
-`oc` is specific to OpenShift in that it includes the standard set of features from `kubectl` plus additional support for OpenShift functionality. See https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/usage-oc-kubectl.html[Usage of oc and kubectl commands] for more details.
-
-. Validate the version of the OpenShift CLI that got installed:
+. Validate the version of the OpenShift CLI:
 +
 [source,sh,role=execute]
 ----
