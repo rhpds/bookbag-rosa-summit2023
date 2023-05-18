@@ -8,11 +8,11 @@ This is good if you need quick access to the cluster, which is great for this wo
 
 Though the recommended approach is to use a formal identity provider to access the cluster (and then grant that user admin privileges, if desired).
 
-. Run this command to create the admin user
+. Run this command to create the admin user. It will also save the output to a file called 'rosa-login.cmd' so that your cluster login information is saved locally for convenience (Don't do that in non-demo environments!)
 +
 [source,sh,role=execute]
 ----
-rosa create admin --cluster rosa-${GUID}
+rosa create admin --cluster rosa-${GUID} |tee rosa-login.cmd
 ----
 +
 .Sample Output
@@ -29,8 +29,6 @@ I: It may take several minutes for this access to become active.
 +
 [TIP]
 ====
-Save the login command somewhere. Also take note of the password for your `cluster-admin` user.
-
 *Make sure to use the entire password when copying and pasting the command!*
 ====
 
@@ -90,10 +88,10 @@ oc whoami --show-console
 https://console-openshift-console.%rosa_subdomain_base%
 ----
 
-. If the URL does not look like the above (e.g., begins with `https://api.rosa`) then it is not yet ready and wait a few more minutes.
+. If the URL does not look like the above (e.g., begins with `https://api.rosa`) then it is not yet ready, so wait a few more minutes.
 . Next, open the printed URL in a web browser.
 . Click on the `htpasswd` identity provider.
-. Enter the username (`cluster-admin`) and password from the previous section.
+. Enter the username (`cluster-admin`) and the password from the previous section.
 . Feel free to explore the web console.
 +
 Congratulations! You're now logged into the cluster and ready to move on to the workshop content.
