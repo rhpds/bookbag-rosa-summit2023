@@ -1,16 +1,16 @@
 == Introduction
 
 When deploying your ROSA cluster, you can configure many aspects of your worker nodes, but what happens when you need to modify your cluster after it has already been created?
-These activities include scaling the number of nodes, changing the instance type, adding labels or taints, just to name a few.
+These activities include scaling the number of nodes, setting an instance type, adding labels or taints, just to name a few.
 
 Many of these changes are done using machine pools.
-machine pools ensure that a specified number of Machine replicas are running at any given time.
-Think of a machine pool as a "template" for the kinds of Machines that make up the worker nodes of your cluster.
+Machine pools ensure that a specified number of machine replicas are running at any given time with even distribution in cloud infrastructure.
+Think of a machine pool as a "template" for the groups of AWS EC2 instances that make up the worker nodes of your cluster.
 If you'd like to learn more, see https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-nodes-machinepools-about.html[About machine pools].
 
 == Scaling worker nodes
 
-. In ROSA worker nodes are managed using machine pools. Let's see what machine pools already exist in our cluster.
+. In ROSA, worker nodes are managed using machine pools. Let's see what machine pools already exist in our cluster.
 To do so, run the following command:
 +
 [source,sh,role=execute]
@@ -91,6 +91,6 @@ rosa delete machinepool -c rosa-${GUID} workshop --yes
 I: Successfully deleted machine pool 'workshop' from cluster 'rosa-6n4s8'
 ----
 
-As you've seen you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels, taints, and autoscaling.  For more information about what you can do with machine pools see the https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.html#creating_machine_pools_cli_rosa-managing-worker-nodes[Creating a machine pool using the ROSA CLI].
+As you've seen, you can create machine pools as needed even of different instance types. You can also use machine pools to configure node labels, taints, and autoscaling.  For more information about what you can do with machine pools see the https://docs.openshift.com/rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.html#creating_machine_pools_cli_rosa-managing-worker-nodes[Creating a machine pool using the ROSA CLI].
 
 You've successfully scaled your cluster up and back down to two worker nodes and seen how to add nodes of different instance types.
