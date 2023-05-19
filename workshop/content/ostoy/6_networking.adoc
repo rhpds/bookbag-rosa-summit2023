@@ -20,7 +20,7 @@ The right tile titled "Hostname Lookup" illustrates how the service name created
 
 === Lookup internal IP address of the service
 
-Enter the name of the microservice we created in the right tile ("Hostname Lookup") following the format of `my-svc.my-namespace.svc.cluster.local` which we created in the service definition of `ostoy-microservice.yaml` which can be seen here:
+Enter the name of the microservice we created in the right tile ("Hostname Lookup") following the format of `<my-svc>.<my-namespace>.svc.cluster.local` which we created in the service definition of `ostoy-microservice.yaml` which can be seen here:
 
 ----
 apiVersion: v1
@@ -39,7 +39,7 @@ spec:
     app: ostoy-microservice
 ----
 
-In this case we will enter: `ostoy-microservice-svc.ostoy.svc.cluster.local`
+In this case we will enter: `ostoy-microservice-svc.ostoy-<XXXXX>.svc.cluster.local`
 
 === IP address returned
 
