@@ -85,10 +85,10 @@ oc whoami --show-console
 .Sample Output
 [source,text,options=nowrap]
 ----
-https://console-openshift-console.%rosa_subdomain_base%
+https://console-openshift-console.apps.rosa.rosa-XXXXX.XXXX.p3.openshiftapps.com
 ----
 
-. If the URL does not look like the above (e.g., begins with `https://api.rosa`) then it is not yet ready, so wait a few more minutes.
+. If the output from the previous step begins with `api.rosa-XXXXX...` instead of `console-openshift-console.apps...` then it is not yet ready. Wait a few more minutes.
 . Next, open the printed URL in a web browser.
 . Click on the `htpasswd` identity provider.
 . Enter the username (`cluster-admin`) and the password from the previous section.
