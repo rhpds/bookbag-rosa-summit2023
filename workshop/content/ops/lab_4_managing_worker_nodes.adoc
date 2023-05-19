@@ -25,7 +25,7 @@ ID       AUTOSCALING  DESIRED REPLICAS  CURRENT REPLICAS  INSTANCE TYPE  LABELS 
 workers  No           2                 2                 m5.xlarge                          us-east-2a         subnet-07465e0e286d4a171  4.12.15  Yes
 ----
 +
-Note that there is only a machine pool for worker nodes.
+Note that there is currently only one machine pool for worker nodes.
 
 . Now that we know that we have two worker nodes, let's create a new machine pool called `workshop` to add a new worker node. Let's create this one of a different instance type.  We already have `m5.xlarge`, so for this machine pool let's use `m6a.xlarge`.  See https://docs.openshift.com/rosa/rosa_architecture/rosa_policy_service_definition/rosa-service-definition.html#rosa-sdpolicy-aws-instance-types_rosa-service-definition[AWS Instance Types] for all supported instance types.
 +
