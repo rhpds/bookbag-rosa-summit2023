@@ -1,3 +1,12 @@
+= Clean up
+
+Now that we no longer need the cluster please delete the ROSA cluster.
+
+[source,sh,role=execute]
+----
+rosa delete cluster -c rosa-$GUID -y
+----
+
 = Conclusion
 
 In this lab we have done a number of things that will help you become more comfortable with Red Hat OpenShift Service on AWS (ROSA). This lab was not intended to be all-encompassing but rather to get you familiar with using ROSA and how you could deploy applications that integrate nicely with other AWS services.  We have learned a number of things about OpenShift, Kubernetes and AWS and hope you have found this useful.  If you would like to do this again, or explore some extra topics that were not covered in this lab, please visit https://www.rosaworkshop.io[www.rosaworkshop.io].
