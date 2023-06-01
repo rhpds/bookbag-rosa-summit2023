@@ -310,7 +310,7 @@ oc create -f $HOME/ostoy-serviceaccount.yaml
 serviceaccount/ostoy-sa created
 ----
 
-. Confirm that is was successful:
+. Confirm that is was successful by checking if the annotation has the role ARN:
 +
 [source,sh,role=execute]
 ----
